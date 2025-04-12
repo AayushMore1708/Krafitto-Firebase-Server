@@ -10,7 +10,9 @@ import serviceAccount from "./firebase-adminsdk.json";
 config();
 
 const app = express();
-const PORT = 4000;
+const PORT = parseInt(process.env.PORT || "4000", 10);
+
+
 
 // Firebase Admin
 initializeApp({
@@ -76,6 +78,6 @@ app.post("/send-notice-push", async (req: Request, res: Response) => {
 
 
 // Start server
-app.listen(PORT, () => {
-  console.log(`🚀 Server running at http://localhost:${PORT}`);
+app.listen(PORT, '0.0.0.0', () => {
+  console.log(`Server running at http://0.0.0.0:${PORT}`);
 });
