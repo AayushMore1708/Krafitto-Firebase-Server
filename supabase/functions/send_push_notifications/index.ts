@@ -9,15 +9,15 @@ const FCM_URL = `https://fcm.googleapis.com/v1/projects/${FCM_PROJECT_ID}/messag
 
 const SERVICE_ACCOUNT = {
   type: "service_account",
-  project_id: Deno.env.get("PROJECT_ID")!,
-  private_key_id: Deno.env.get("PRIVATE_KEY_ID")!,
-  private_key: Deno.env.get("PRIVATE_KEY")!.replace(/\\n/g, "\n"),
-  client_email: Deno.env.get("CLIENT_EMAIL")!,
-  client_id: Deno.env.get("CLIENT_ID")!,
+  project_id: Deno.env.get("project_id")!,
+  private_key_id: Deno.env.get("private_key_id")!,
+  private_key: Deno.env.get("private_key")!.replace(/\\n/g, "\n"),
+  client_email: Deno.env.get("client_email")!,
+  client_id: Deno.env.get("client_id")!,
   auth_uri: "https://accounts.google.com/o/oauth2/auth",
   token_uri: "https://oauth2.googleapis.com/token",
   auth_provider_x509_cert_url: "https://www.googleapis.com/oauth2/v1/certs",
-  client_x509_cert_url: Deno.env.get("CLIENT_CERT_URL")!,
+  client_x509_cert_url: Deno.env.get("client_x509_cert_url")!,
   universe_domain: "googleapis.com",
 };
 
