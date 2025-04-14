@@ -21,6 +21,7 @@
     "@types/cors": "^2.8.17",
     "@types/express": "^5.0.1",
     "@types/node": "^22.14.0",
+    "supabase": "^2.20.12",
     "ts-node": "^10.9.2",
     "typescript": "^5.8.3"
   }
